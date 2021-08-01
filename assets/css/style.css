@@ -35,14 +35,17 @@ body::before {
 }
 
 a {
-    color: #fff
+    color: #fff;
+
 }
 
 a:hover {
     color: red;
     text-decoration: none;
 }
-
+.about-heading a{
+    display:none;
+}
 h1,
 h2,
 h3,
@@ -51,10 +54,7 @@ h5,
 h6 {
     font-family: "Raleway", sans-serif;
 }
-.about-heading a{
-    display:none;
-}
-    
+
 
 /*--------------------------------------------------------------
 # Header
