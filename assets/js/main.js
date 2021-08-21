@@ -1,6 +1,74 @@
 !(function($) {
     "use strict";
 
+    $( document ).ready( function() {
+        
+        var entries = [ 
+            
+            { label: 'JavaScript' },
+            { label: 'jQuery'},
+            { label: 'HTML' },
+            { label: 'CSS'},
+            { label: 'Bootstrap'},
+            { label: 'Node js' },
+            { label: 'Express js'},
+            { label: 'Embedded js'},
+            { label: 'VLSI' },
+            { label: 'Python' },
+            { label: 'Verilog' },
+            { label: 'Electronics' },
+            { label: 'Processors'},
+            { label: 'npm' },
+            { label: 'GIT' },
+            { label: 'STA' },
+            { label: '3d Design'},
+            { label: 'OOPS' },
+            { label: 'Simulation'},
+            { label: 'Robotics'},
+
+
+
+        ];
+
+        var settings = {
+
+            entries: entries,
+            width: 550,
+            height: 850,
+            radius: '70%',
+            radiusMin: 75,
+            bgDraw: true,
+            bgColor: '#000',
+            opacityOver: 1.00,
+            opacityOut: 0.1,
+            opacitySpeed: 6,
+            fov: 800,
+            speed: 1,
+            fontFamily: 'Oswald, Arial, sans-serif',
+            fontSize: '1rem',
+            fontColor: '#08fdd8',
+            fontWeight: 'bold',//bold
+            fontStyle: 'normal',//italic 
+            fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+            fontToUpperCase: false,
+            tooltipFontFamily: 'Oswald, Arial, sans-serif',
+            tooltipFontSize: '11',
+            tooltipFontColor: '#fff',
+            tooltipFontWeight: 'normal',//bold
+            tooltipFontStyle: 'normal',//italic 
+            tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+            tooltipFontToUpperCase: false,
+            tooltipTextAnchor: 'left',
+            tooltipDiffX: 0,
+            tooltipDiffY: 10
+
+        };
+
+        //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+        $( '#holder' ).svg3DTagCloud( settings );
+
+} );
+
 
     // Nav Menu
     $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
@@ -133,5 +201,29 @@
     });
 
 })(jQuery);
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 1000,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+
+
+
+
 
 
