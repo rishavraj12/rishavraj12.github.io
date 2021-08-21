@@ -59,6 +59,12 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+
+
 
 #header {
     transition: ease-in-out 0.35s;
@@ -537,7 +543,14 @@ a.button4:hover {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
+.skills-content{
+    position: relative;
+    margin-top:-80px;
 
+}
+.skills-para{
+    width:80%;
+}
 .skills .progress {
     height: 50px;
     display: block;
@@ -572,8 +585,8 @@ a.button4:hover {
     background-color: red;
 }
 .interests{
-    margin:30px -30px;
-    width:120%
+
+    width:100%
 }
 .interests .icon-box {
     display: flex;
@@ -1433,3 +1446,19 @@ p.desc:hover {
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
 }
+#holder{
+    position: relative;
+ 
+    top:-25%;
+}
+
+@media (max-width: 480px) {
+    #holder{
+        position: relative;
+        left:-70%;
+        top:-10%;
+       
+        
+    }
+}
+
