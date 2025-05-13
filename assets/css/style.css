@@ -558,6 +558,7 @@ a.button4:hover {
 }
 .skills-para{
     width:100%;
+    height:110%;
 }
 .skills .progress {
     height: 50px;
